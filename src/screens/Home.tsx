@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler'; // Inisialisasi Gesture Handler (Penting)
 import React from 'react';
 import {
   View,
@@ -8,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -47,12 +48,11 @@ const Home: React.FC = () => {
       {/* Image Cards */}
       <View style={styles.cardContainer}>
         <Image
-          source={require('../../vegetables1.png')}
+          source={{uri: 'https://via.placeholder.com/150'}}
           style={styles.cardImage}
         />
-
         <Image
-          source={require('../../vegetables1.png')}
+          source={{uri: 'https://via.placeholder.com/150'}}
           style={styles.cardImage}
         />
       </View>
@@ -72,8 +72,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
-    justifyContent: 'center',
-    right: 10,
   },
   menuButton: {
     marginRight: 10,
@@ -81,14 +79,11 @@ const styles = StyleSheet.create({
   menuIcon: {
     fontSize: 24,
     color: 'white',
-    position: 'relative',
-    right: 70,
   },
   title: {
     fontSize: 24,
     color: 'white',
     fontWeight: 'bold',
-    alignItems: 'center',
   },
   searchContainer: {
     backgroundColor: 'white',
@@ -102,9 +97,8 @@ const styles = StyleSheet.create({
   },
   iconRow: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     marginBottom: 20,
-    gap: 100,
   },
   iconButton: {
     width: 50,
